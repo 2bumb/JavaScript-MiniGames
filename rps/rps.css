@@ -1,0 +1,15 @@
+body{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    }
+
+    h1{font-size: 3.5rem;}
+
+    .choices{
+        margin-bottom: 30px;
+    }
+    .choices button{font-size: 203px;
+    background-color: red;}
