@@ -12,4 +12,14 @@ body{
         margin-bottom: 30px;
     }
     .choices button{font-size: 203px;
-    background-color: red;}
+    background-color: red;
+    margin: 0 10px;
+cursor: pointer;}
+
+#playerDisplay, #computerDisplay{
+    font-size: 2.5rem;
+}
+#gameresult{
+font-size:5rem;
+margin:30px 0;
+}
