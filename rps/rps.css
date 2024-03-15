@@ -11,7 +11,7 @@ body{
     .choices{
         margin-bottom: 30px;
     }
-    .choices button{font-size: 203px;
+    .choices button{font-size: 20vmin;
     background-color: red;
     margin: 0 10px;
 cursor: pointer;}

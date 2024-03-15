@@ -13,9 +13,26 @@ const gameresult = document.getElementById("gameResult");
 
 // keep in mind javascript is cap sensitive
 
+//This section is used to make the computer pick a random number
+
 function playgame(playerChoice){
 
   const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+  let result =""
   
-  console.log(computerChoice);
-};
+
+if(playerChoice===computerChoice){
+
+    result="Draw!"
+}
+else{
+    switch(playerChoice){
+        case "rock":
+            result = (computerChoice ==="scissors")? "YOU WIN!": "YOU LOSE"
+            break;
+
+    }
+}
+
+}
