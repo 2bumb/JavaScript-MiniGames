@@ -29,9 +29,13 @@ if(playerChoice===computerChoice){
 else{
     switch(playerChoice){
         case "rock":
-            result = (computerChoice ==="scissors")? "YOU WIN!": "YOU LOSE"
-            break;
-
+            result (computerChoice ==="scissors")? "YOU WIN!": "YOU LOSE"
+            case "paper":
+                result = (computerChoice ==="rock")? "YOU WIN!": "YOU LOSE"
+                break;
+                case "scissors":
+                    result = (computerChoice ==="paper")? "YOU WIN!": "YOU LOSE"
+                    break;
     }
 }
 
