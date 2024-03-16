@@ -15,16 +15,16 @@ const gameresult = document.getElementById("gameResult");
 
 // keep in mind javascript is cap sensitive
 
-//This section is used to make the computer pick a random number
 
+
+  //when the player clicks on the button, the computer will choice between rock paper scissors
+ 
 function playgame(playerChoice){
 
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   let result =""
 
-  //when the player clicks on the button, the computer will choice between rock paper scissors
-  
 
 if(playerChoice === computerChoice){
 
@@ -45,6 +45,8 @@ else{
 
     }
 }
+
+//used to display text 
 playerDisplay.textContent = `Player: ${playerChoice}`
 computerDisplay.textContent = `Computer: ${computerChoice}`
 gameResult.textContent = result;
