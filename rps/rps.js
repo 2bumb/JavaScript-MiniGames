@@ -1,7 +1,9 @@
 
 // declaring the variables 
 
-const choices = ["rock", "paper", "scissors"];
+const choices = ["✊🏼", "✋🏼", "✌🏼"];
+//rock ✊🏼 paper✋🏼 scissors✌🏼
+
 
 const playerDisplay = document.getElementById("playerDisplay");
 
@@ -22,19 +24,19 @@ function playgame(playerChoice){
   let result =""
   
 
-if(playerChoice===computerChoice){
+if(playerChoice === computerChoice){
 
     result="Draw!"
 }
 else{
     switch(playerChoice){
         case "rock":
-            result (computerChoice ==="scissors")? "YOU WIN!": "YOU LOSE"
+            result (computerChoice === "scissors") ? "YOU WIN!": "YOU LOSE"
             case "paper":
-                result = (computerChoice ==="rock")? "YOU WIN!": "YOU LOSE"
+                result = (computerChoice === "rock") ? "YOU WIN!": "YOU LOSE"
                 break;
                 case "scissors":
-                    result = (computerChoice ==="paper")? "YOU WIN!": "YOU LOSE"
+                    result = (computerChoice === "paper") ? "YOU WIN!": "YOU LOSE"
                     break;
 
 
@@ -42,6 +44,6 @@ else{
     }
 }
 playerDisplay.textContent = `Player: ${playerChoice}`
-computerChoice.textContent = `Computer: ${computerChoice}`
-result.textContent = `Computer: ${computerChoice}`
+computerDisplay.textContent = `Computer: ${computerChoice}`
+result.textContent = result;
 }
