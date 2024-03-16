@@ -36,7 +36,12 @@ else{
                 case "scissors":
                     result = (computerChoice ==="paper")? "YOU WIN!": "YOU LOSE"
                     break;
+
+
+
     }
 }
-
+playerDisplay.textContent = `Player: ${playerChoice}`
+computerChoice.textContent = `Computer: ${computerChoice}`
+result.textContent = `Computer: ${computerChoice}`
 }
