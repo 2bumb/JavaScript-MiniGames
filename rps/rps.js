@@ -47,5 +47,5 @@ else{
 }
 playerDisplay.textContent = `Player: ${playerChoice}`
 computerDisplay.textContent = `Computer: ${computerChoice}`
-result.textContent = result;
+gameResult.textContent = result;
 }
