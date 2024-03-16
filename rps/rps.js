@@ -22,6 +22,8 @@ function playgame(playerChoice){
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   let result =""
+
+  //when the player clicks on the button, the computer will choice between rock paper scissors
   
 
 if(playerChoice === computerChoice){
