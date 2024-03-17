@@ -50,4 +50,17 @@ else{
 playerDisplay.textContent = `Player: ${playerChoice}`
 computerDisplay.textContent = `Computer: ${computerChoice}`
 gameResult.textContent = result;
-}
+
+
+
+
+switch (result){
+  case "YOU WIN!":
+gameResult.classList.add("greentext");
+break;
+
+case "YOU LOSE!":
+  gameResult.classList.add("redtext");
+  break;
+      }
+  }
