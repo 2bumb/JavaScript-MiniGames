@@ -34,9 +34,11 @@ else{
     switch(playerChoice){
         case "✊🏼":
             result = (computerChoice === "✌🏼") ? "YOU WIN!": "YOU LOSE"
+            break;
             case "✋🏼":
                 result = (computerChoice === "✊🏼") ? "YOU WIN!": "YOU LOSE"
                 break;
+                
                 case "✌🏼":
                     result = (computerChoice === "✋🏼") ? "YOU WIN!": "YOU LOSE"
                     break;
@@ -56,11 +58,11 @@ gameResult.textContent = result;
 
 switch (result){
   case "YOU WIN!":
-gameResult.classList.add("greentext");
+gameResult.classList.add("greenText");
 break;
 
 case "YOU LOSE!":
-  gameResult.classList.add("redtext");
+  gameResult.classList.add("redText");
   break;
       }
   }
