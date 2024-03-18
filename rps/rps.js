@@ -42,6 +42,8 @@ else{
 playerDisplay.textContent = `Player: ${playerChoice}`;
 computerDisplay.textContent = `Computer: ${computerChoice}`;
 gameResult.textContent = result;
+
+//
 gameResult.classList.remove("greenText", "redText");
 
 
