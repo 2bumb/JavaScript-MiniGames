@@ -4,6 +4,10 @@ const choices = ["✊🏼", "✋🏼", "✌🏼"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const gameResult = document.getElementById("gameResult");
+const playerScoreResult = document.getElementById("playerScoreResult");
+const computerScoreResult = document.getElementById("playerScoreResult");
+let playerResult = 0;
+let computerResult = 0;
 
 
 
