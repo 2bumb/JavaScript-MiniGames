@@ -6,6 +6,8 @@ const computerDisplay = document.getElementById("computerDisplay");
 const gameResult = document.getElementById("gameResult");
 const playerScoreResult = document.getElementById("playerScoreResult");
 const computerScoreResult = document.getElementById("playerScoreResult");
+
+//we are using  let the varaibles for playeResult and computerResult because their values will change while const variables will stay constant 
 let playerResult = 0;
 let computerResult = 0;
 
