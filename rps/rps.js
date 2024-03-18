@@ -56,13 +56,14 @@ gameResult.classList.remove("greenText", "redText");
 switch(result){
   case "YOU WIN!":
     gameResult.classList.add("greenText");
-      // playerScore++;
-      // playerScoreDisplay.textContent = playerScore;
+ playerResult++;
+ playerScoreResult.textContent = playerResult;
       break;
+      
   case "YOU LOSE":
     gameResult.classList.add("redText");
-      // computerScore++;
-      // computerScoreDisplay.textContent = computerScore;
+    computerResult++;
+    computeScoreResult.textContent = computerResult;
       break;
 }
 }
