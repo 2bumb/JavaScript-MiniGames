@@ -13,6 +13,8 @@ body{
 
     .choices{
         margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
     }
     .choices button{font-size: 20vmin;
     background-color: red;
