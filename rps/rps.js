@@ -6,6 +6,9 @@ const computerDisplay = document.getElementById("computerDisplay");
 const gameResult = document.getElementById("gameResult");
 const playerScoreResult = document.getElementById("playerScoreResult");
 const computerScoreResult = document.getElementById("playerScoreResult");
+const winAudio = document.getElementById("winAudio");
+const loseAudio = document.getElementById("loseAudio");
+const tieAudio = document.getElementById("tieAudio");
 
 //we are using  let the varaibles for playeResult and computerResult because their values will change while const variables will stay constant 
 let playerResult = 0;
@@ -22,12 +25,12 @@ let computerResult = 0;
 function playgame(playerChoice){
 
   const computerChoice = choices[Math.floor(Math.random() * 3)];
-   let result =""
+   let result  =" winAudio.play();"
 
 
 if(playerChoice === computerChoice){
 
-    result="Draw!";
+    result="Tie!"; tieAudio.play(); ;
 }
 else{
     switch(playerChoice){
@@ -58,12 +61,15 @@ switch(result){
     gameResult.classList.add("greenText");
  playerResult++;
  playerScoreResult.textContent = playerResult;
+ winAudio.play();
       break;
       
   case "YOU LOSE":
     gameResult.classList.add("redText");
     computerResult++;
     computeScoreResult.textContent = computerResult;
+    loseAudio.play();
       break;
 }
 }
+

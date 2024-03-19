@@ -46,7 +46,7 @@ justify-content: space-between;
 }
 
 
-.container-player, .container-computer {background-color: red;
+.container-player, .container-computer {background-color: transparent;
 margin:  12px 10px;
  
 position: relative;
