@@ -47,6 +47,12 @@ justify-content: space-between;
 
 
 .container-player, .container-computer {background-color: red;
-margin: 0 10px;
-height: 50px;
-padding: 10px 0px;}
+margin:  12px 10px;
+ 
+position: relative;
+
+
+padding:50px 10px;}
+
+
+.container-computer{text-align:center;}
