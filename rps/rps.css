@@ -71,3 +71,7 @@ padding:50px 10px;}
 }
 
 .restart{padding: 10px;}
+
+.home a{text-decoration: none;
+    color:inherit;
+}
