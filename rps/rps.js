@@ -71,6 +71,10 @@ switch(result){
     loseAudio.play();
       break;
 }
+
+
+
+// refresh function used to refresh the entire game
 }
 function refreshFunction() {
   playerResult = 0;
