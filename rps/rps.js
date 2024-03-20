@@ -73,3 +73,9 @@ switch(result){
 }
 }
 
+function refreshFunction() {
+    playerResult = 0;
+    computerResult = 0;
+    playerScoreResult.textContent = playerResult;
+    computeScoreResult.textContent = computerResult;
+}
