@@ -78,5 +78,6 @@ function refreshFunction() {
   playerScoreResult.textContent = playerResult;
   computeScoreResult.textContent = computerResult;
   gameResult.textContent = ""; 
-  
+  playerDisplay.textContent  = "Player:";
+  computerDisplay.textContent  = "Computer:";
 }
