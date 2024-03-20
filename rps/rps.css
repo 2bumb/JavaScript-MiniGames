@@ -17,7 +17,8 @@ body{
         justify-content: center;
     }
     .choices button{font-size: 20vmin;
-    background-color: red;
+    background-color: transparent;
+    border: transparent;
     margin: 0 10px;
 cursor: pointer;}
 
@@ -60,3 +61,12 @@ padding:50px 10px;}
 .container-computer{text-align:center;}
 
 .container-player{text-align: center;}
+
+.homerestart-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Add this line to display items in a column */
+    padding: 10x 0px;
+}
+
