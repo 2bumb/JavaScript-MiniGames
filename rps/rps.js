@@ -72,10 +72,11 @@ switch(result){
       break;
 }
 }
-
 function refreshFunction() {
-    playerResult = 0;
-    computerResult = 0;
-    playerScoreResult.textContent = playerResult;
-    computeScoreResult.textContent = computerResult;
+  playerResult = 0;
+  computerResult = 0;
+  playerScoreResult.textContent = playerResult;
+  computeScoreResult.textContent = computerResult;
+  gameResult.textContent = ""; 
+  
 }
