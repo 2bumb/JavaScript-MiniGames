@@ -48,8 +48,8 @@ else{
 }
 
 //used to display text 
-playerDisplay.textContent = `Player: ${playerChoice}`;
-computerDisplay.textContent = `Computer: ${computerChoice}`;
+playerDisplay.textContent = ` ${playerChoice}`;
+computerDisplay.textContent = ` ${computerChoice}`;
 gameResult.textContent = result;
 
 //
@@ -82,7 +82,7 @@ function refreshFunction() {
   playerScoreResult.textContent = playerResult;
   computeScoreResult.textContent = computerResult;
   gameResult.textContent = ""; 
-  playerDisplay.textContent  = "Player:";
-  computerDisplay.textContent  = "Computer:";
+  playerDisplay.textContent  = "";
+  computerDisplay.textContent  = "";
   resetAudio.play();
 }

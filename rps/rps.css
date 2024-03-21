@@ -23,17 +23,19 @@ body{
 cursor: pointer;}
 
 #playerDisplay, #computerDisplay{
-    font-size: 2.5rem;
+    font-size:7vmin;
 }
 #gameResult{
 font-size: 5vmin;
 margin:30px 0;
 text-align: center;
 }
-.scoreResult{font-size: 2vmin;}
+.scoreResult{font-size: 3vmin;
+font-family: Lalezar;}
 
 .greenText, #playerScoreResult{color:green;
 font-weight: bold;
+
 }
 
 .redText, #computeScoreResult{color:red;
@@ -68,6 +70,7 @@ padding:50px 10px;}
     align-items: center;
     flex-direction: column;
     padding: 10x 0px;
+    margin: 10pxw;
 }
 
 .restart{padding: 10px;}
@@ -75,7 +78,13 @@ padding:50px 10px;}
 .home a{text-decoration: none;
     color:inherit;
 }
-
+.home{font-size: 2vmin;}
 
 .restart button{
-    cursor: pointer;}
+    cursor: pointer;
+height:100%;
+width: 8vmin;
+border: none;
+background-color: transparent;}
+
+ 
