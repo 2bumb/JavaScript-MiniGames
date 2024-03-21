@@ -1,2 +1,26 @@
-h1{ font-family: "Luckiest Guy";
-font-size: 7vmin;}
+/* style.css */
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    text-align: center;
+    background: linear-gradient(45deg, purple, rgb(55, 55, 107), red, yellow, green);
+    background-size: 500% 500%; /* Adjusted background size */
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 9s ease infinite; /* Change '7s' to adjust speed */
+}
+
+h1 span{color:red}
