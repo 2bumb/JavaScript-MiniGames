@@ -78,7 +78,8 @@ padding:50px 10px;}
 .home a{text-decoration: none;
     color:inherit;
 }
-.home{font-size: 2vmin;}
+.home{font-size: 2vmin;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
 .restart button{
     cursor: pointer;
@@ -90,6 +91,32 @@ background-color: transparent;}
 .choices button:hover {
     transform: scale(1.1); /* Increase the size on hover */
 opacity: 0.7;
+color:red
 }
 
- 
+.refresh-btn:hover .fa-refresh {
+    color:rgb(6, 206, 216); /* Change the color on hover */
+    transform: scale(1.2); /* Increase the size on hover */
+
+    
+}
+
+
+.home:hover {
+    color: #0e070789; /* Change the color on hover */
+    transform: scale(1.2); /* Increase the size on hover */
+}
+
+.fa-refresh{color:rgb(4, 153, 161)}
+
+
+/* icon animation  */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin-animation {
+    animation: spin 1s linear; /* 1-second spin animation */
+    color:rgb(4, 153, 161);
+}

@@ -86,3 +86,26 @@ function refreshFunction() {
   computerDisplay.textContent  = "";
   resetAudio.play();
 }
+
+
+
+
+// refresh button animation 
+
+
+
+function startSpinningAndThenRefresh() {
+  const refreshIcon = document.getElementById("refresh-icon");
+
+  // Add spinning animation to the refresh icon
+  refreshIcon.classList.add("spin-animation");
+
+  // Set a timeout to execute the refresh function after animation
+  setTimeout(function() {
+      // Call the refresh function after the animation ends
+      refreshFunction();
+      // Remove spinning animation class
+      refreshIcon.classList.remove("spin-animation");
+  }, 680);
+  resetAudio.play(); // 1000 milliseconds = 1 second
+}
