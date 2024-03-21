@@ -84,4 +84,5 @@ function refreshFunction() {
   gameResult.textContent = ""; 
   playerDisplay.textContent  = "Player:";
   computerDisplay.textContent  = "Computer:";
+  resetAudio.play();
 }
