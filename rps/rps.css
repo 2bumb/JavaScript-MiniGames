@@ -120,3 +120,6 @@ color:red
     animation: spin 1s linear; /* 1-second spin animation */
     color:rgb(4, 153, 161);
 }
+
+button{background-color:transparent;
+border:none;}

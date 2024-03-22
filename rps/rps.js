@@ -9,6 +9,7 @@ const computerScoreResult = document.getElementById("playerScoreResult");
 const winAudio = document.getElementById("winAudio");
 const loseAudio = document.getElementById("loseAudio");
 const tieAudio = document.getElementById("tieAudio");
+const homecardAudio = document.getElementById("home-cardAudio");
 
 //we are using  let the varaibles for playeResult and computerResult because their values will change while const variables will stay constant 
 let playerResult = 0;
@@ -109,3 +110,8 @@ function startSpinningAndThenRefresh() {
   }, 680);
   resetAudio.play(); // 1000 milliseconds = 1 second
 }
+
+const elements = document.querySelectorAll('.home');
+home-cardAudio.play();
+
+funtion
