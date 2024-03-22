@@ -1,4 +1,4 @@
-/* style.css */
+
 
 @keyframes gradientAnimation {
     0% {
@@ -24,3 +24,21 @@ h1 {
 }
 
 h1 span{color:red}
+
+
+
+
+ 
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.box {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+}
