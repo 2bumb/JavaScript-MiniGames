@@ -114,4 +114,4 @@ function startSpinningAndThenRefresh() {
 const elements = document.querySelectorAll('.home');
 home-cardAudio.play();
 
-funtion
+ 
