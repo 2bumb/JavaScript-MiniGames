@@ -110,8 +110,7 @@ function startSpinningAndThenRefresh() {
   }, 680);
   resetAudio.play(); // 1000 milliseconds = 1 second
 }
-
-const elements = document.querySelectorAll('.home');
-home-cardAudio.play();
-
- 
+function homeclick() {
+  var homecardAudio = document.getElementById("homecardAudio");
+  homecardAudio.play();
+}
