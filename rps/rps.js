@@ -113,8 +113,8 @@ function startSpinningAndThenRefresh() {
 
 
 
-// 
-
+// LEARN MORE ABOUT HOW ADDEVENTLISTNER WORKS
+//Functin is used when client clicks on the home button
 
 function homeclick() {
   var homecardAudio = document.getElementById("homecardAudio");
