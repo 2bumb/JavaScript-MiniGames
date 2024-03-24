@@ -110,7 +110,20 @@ function startSpinningAndThenRefresh() {
   }, 680);
   resetAudio.play(); // 1000 milliseconds = 1 second
 }
+
+
+
+// 
+
+
 function homeclick() {
   var homecardAudio = document.getElementById("homecardAudio");
+  
+  // Play the audio
   homecardAudio.play();
+
+  // When the audio ends, navigate to the new page
+  homecardAudio.addEventListener('ended', function() {
+    window.location.href = "/Index.FrontPage/index.html";
+  });
 }
