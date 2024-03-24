@@ -79,6 +79,7 @@ padding:50px 10px;}
     color:inherit;
 }
 .home{font-size: 2vmin;
+    cursor: pointer;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
 .restart button{
