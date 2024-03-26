@@ -94,8 +94,9 @@ border:none;}
     transform: translateX(-50%) rotate(-5deg); /* Adjust rotation angle as needed */
     color:rgb(235, 231, 14)
 }
-.tilted-middleleft{left: 20%;
+.tilted-middleleft{left: 22%;
     font-size: 2em;
+    margin: 0 22px;
     transform: translateX(-50%) rotate(-5deg);
 color:blue}
 
@@ -120,4 +121,7 @@ color:blue}
         50% { top: -10px; } /* Move up gradually */
         100% { top: 0; } /* Return to original position */
     }
+
+    .answer{text-align: center;
+    margin: 0 auto;}
     
