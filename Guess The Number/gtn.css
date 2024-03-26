@@ -72,6 +72,7 @@ border:none;}
 .tilted-topright {
     font-size: 3em;
     position: absolute;
+    transition: top 1s ease; /* Transition for smooth movement */
     top: -35px; /* Adjust this value to position the numbers higher */
 }
 
@@ -91,7 +92,7 @@ border:none;}
 .tilted-middle {
     left: 50%;
     transform: translateX(-50%) rotate(-5deg); /* Adjust rotation angle as needed */
-    color:rgb(163, 163, 54)
+    color:rgb(235, 231, 14)
 }
 .tilted-middleleft{left: 20%;
     font-size: 2em;
@@ -111,5 +112,12 @@ color:blue}
 .tilted-right:hover,
 .tilted-middle:hover,
 .tilted-middleleft:hover,
-.tilted-topright:hover{color:darkred}
+.tilted-topright:hover{color:darkred;
+    animation: moveUp 2s ease-in-out infinite; }
 
+    @keyframes moveUp {
+      
+        50% { top: -10px; } /* Move up gradually */
+        100% { top: 0; } /* Return to original position */
+    }
+    
