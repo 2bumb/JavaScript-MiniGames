@@ -68,7 +68,8 @@ border:none;}
 .tilted-left,
 .tilted-right,
 .tilted-middle,
-.tilted-middleleft {
+.tilted-middleleft,
+.tilted-topright {
     font-size: 3em;
     position: absolute;
     top: -35px; /* Adjust this value to position the numbers higher */
@@ -77,18 +78,38 @@ border:none;}
 .tilted-left {
     left: 0;
     transform: rotate(-5deg);
+    color:rgb(255, 166, 0)
 
 }
 
 .tilted-right {
     right: 0;
     transform: rotate(5deg);
+    color:green;
 }
 
 .tilted-middle {
     left: 50%;
     transform: translateX(-50%) rotate(-5deg); /* Adjust rotation angle as needed */
+    color:rgb(163, 163, 54)
 }
 .tilted-middleleft{left: 20%;
     font-size: 2em;
-    transform: translateX(-50%) rotate(-5deg);}
+    transform: translateX(-50%) rotate(-5deg);
+color:blue}
+
+    .tilted-topright{  font-size: 2em;
+        transform: rotate(-5deg);
+    right:50px;
+    color: red;
+    font-family:'Times New Roman', Times, serif
+}
+
+
+
+.tilted-left:hover,
+.tilted-right:hover,
+.tilted-middle:hover,
+.tilted-middleleft:hover,
+.tilted-topright:hover{color:darkred}
+
