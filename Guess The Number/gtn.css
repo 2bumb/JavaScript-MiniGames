@@ -112,7 +112,7 @@ color:blue}
 .tilted-right:hover,
 .tilted-middle:hover,
 .tilted-middleleft:hover,
-.tilted-topright:hover{color:darkred;
+.tilted-topright:hover{opacity: 0.6;
     animation: moveUp 2s ease-in-out infinite; }
 
     @keyframes moveUp {
