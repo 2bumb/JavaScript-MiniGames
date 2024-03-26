@@ -60,3 +60,35 @@ body{
 
 button{background-color:transparent;
 border:none;}
+.head-title {
+    position: relative;
+    text-align: center;
+}
+
+.tilted-left,
+.tilted-right,
+.tilted-middle,
+.tilted-middleleft {
+    font-size: 3em;
+    position: absolute;
+    top: -35px; /* Adjust this value to position the numbers higher */
+}
+
+.tilted-left {
+    left: 0;
+    transform: rotate(-5deg);
+
+}
+
+.tilted-right {
+    right: 0;
+    transform: rotate(5deg);
+}
+
+.tilted-middle {
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg); /* Adjust rotation angle as needed */
+}
+.tilted-middleleft{left: 20%;
+    font-size: 2em;
+    transform: translateX(-50%) rotate(-5deg);}
