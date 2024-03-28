@@ -93,7 +93,7 @@ padding:0 80px;}
 
 .tilted-middle {
     left: 50%;
-    transform: translateX(-50%) rotate(-5deg); /* Adjust rotation angle as needed */
+    transform: translateX(-50%) rotate(-5deg); 
     color:rgb(235, 231, 14)
 }
 .tilted-middleleft{left: 22%;
@@ -109,13 +109,36 @@ color:blue}
     font-family:'Times New Roman', Times, serif
 }
 
+/* hover section */
+.tilted-topright:hover{  
+color: rgb(196, 0, 0);
+}
+
+.tilted-middleleft:hover{
+color:rgb(0, 0, 134)}
+
+.tilted-middle:hover{
+    color:rgb(255, 252, 103)
+}
+.tilted-left:hover {
+
+    color:rgb(255, 208, 121)
+
+}
+.tilted-right:hover{
+ 
+    color:rgb(53, 255, 53);
+}
+
 
 
 .tilted-left:hover,
 .tilted-right:hover,
 .tilted-middle:hover,
 .tilted-middleleft:hover,
-.tilted-topright:hover{opacity: 0.6;
+.tilted-topright:hover{
+
+
     animation: moveUp 1.4s ease-in-out infinite; }
 
     @keyframes moveUp {
