@@ -39,7 +39,8 @@
 
 <div class="container-guessinput">
     <div class="input">
-        <input type="number" placeholder="Enter a Guess.." min="1" max="100">
+        <input id="guessInput" type="number" placeholder="Enter a Guess.." min="1" max="100" required>
+
   
     </div>
 
@@ -50,10 +51,12 @@
 <div class="homerestart-container">
     <div class="horizontal-flex">
         <button class="home btn" onclick="homeclick()">HOME</button>
-        <button class="submitAnswer btn" type="submit">Submit</button>
+        <button class="submitAnswer btn" onclick="submitGuess()" required>Submit</button>
+
         <button class="refresh-btn btn" onclick="startSpinningAndThenRefresh()">
             <i id="refresh-icon" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
         </button>
+   
     </div>
 </div>
 
