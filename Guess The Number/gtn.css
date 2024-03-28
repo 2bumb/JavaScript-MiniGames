@@ -24,6 +24,7 @@ padding:0 80px;}
     text-align: center;
 }
 
+
 .home {
     margin: 0 auto;
 }
@@ -151,6 +152,13 @@ color:rgb(0, 0, 134)}
     margin: 0 auto;
 padding: 10px 5px;}
 
+.container-guessinput{
+    text-align: center;
+    margin: 0 auto;
+padding: 14x 0px;
+}
+
+
 .container {
     /* Your main website container styles */
     min-height: 100vh; /* Set minimum height to fill the viewport */
@@ -234,4 +242,12 @@ button {
     opacity: 0;
    }
 
-    
+
+   .input input[type="number"] {
+    width:200px; /* Adjust this value as needed */
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+font-size: vmin;
+}
+

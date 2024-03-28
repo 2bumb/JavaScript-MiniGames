@@ -9,15 +9,26 @@ let running;
 
 while(running){
         guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
+        guess= Number(guess);
 console.log(typeof guess, guess);
     running=false;
+
+
+    guess = Number(guess);
+    if(isNaN(guess)){
+
+        
+    }
 }
 
-
-
-
-
 console.log(answer);
+
+
+
+
+
+
+
 //when the number 21 is hovered, the audio with the id "meme21audio" wil be played
 function play21hover(){
    document.querySelector('.tilted-left').addEventListener('mouseover', function() {
