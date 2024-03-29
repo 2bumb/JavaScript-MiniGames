@@ -32,7 +32,7 @@ function submitGuess() {
     console.log("Submitted guess:", guess);
    
     // Update the content of the span element with the guess
-    document.getElementById("previousguest").innerText = "Attempts: " + guess;
+    document.getElementById("previousguest").innerText = "Previous guest: " + guess;
 
     return guess;
 }
