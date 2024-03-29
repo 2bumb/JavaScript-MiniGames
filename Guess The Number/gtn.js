@@ -25,13 +25,28 @@
 // console.log(answer);
 
 
-
+//This code displays the clients number of guess using the button 
 function submitGuess() {
     console.log("Submit button clicked");
     var guess = document.getElementById("guessInput").value;
     console.log("Submitted guess:", guess);
-    // Perform further actions
+   
+    // Update the content of the span element with the guess
+    document.getElementById("previousguest").innerText = "Attempts: " + guess;
+
+    return guess;
 }
+
+var result = submitGuess();
+console.log("Result of submitGuess():", result); 
+
+
+
+
+
+
+
+
 
 
 
