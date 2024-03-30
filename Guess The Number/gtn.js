@@ -1,50 +1,30 @@
-// const minNum = 1;
-// const maxNum = 100;
-// understand how math we're using
-
-// const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-
-// let attempts = 0;
-// let guess;
-// let running;
-
-// while(running){
-//         guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
-//         guess= Number(guess);
-// console.log(typeof guess, guess);
-//     running=false;
 
 
-//     guess = Number(guess);
-//     if(isNaN(guess)){
-
-        
-//     }
-// }
-
-// console.log(answer);
-
-
-//This code displays the clients number of guess using the button 
-var userGuesses = [];
-
+//This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
 function submitGuess() {
-    console.log("Submit button clicked");
-    var guess = document.getElementById("guessInput").value;
-    console.log("Submitted guess:", guess);
-   
-    // Add the guess to the array of guesses
-    userGuesses.push(guess);
-    
-    // Update the content of the div element with all the guesses
-    document.getElementById("previousguest").innerText = "Previous guesses: " + userGuesses.join(", ");
-   
-    return guess;
+    var guessInput = document.getElementById("guessInput");
+    var guess = guessInput.value;
+
+    if (!guess) {
+        guessInput.setCustomValidity("Please enter a guess.");
+        guessInput.reportValidity();
+    } else {
+        // Your logic for submitting the guess
+        console.log("Submitted guess:", guess);
+        
+        // Add the guess to the list of previous guesses
+        var previousGuesses = document.getElementById("previousguest");
+        var currentGuesses = previousGuesses.innerText;
+        if (currentGuesses) {
+            previousGuesses.innerText = currentGuesses + ", " + guess;
+        } else {
+            previousGuesses.innerText = guess;
+        }
+        
+        // Clear the input field after submitting the guess
+        guessInput.value = "";
+    }
 }
-
-
-
-
 
 
 
