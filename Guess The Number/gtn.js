@@ -1,9 +1,12 @@
 
 
 //This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
+
+//We are targetting guess Input which is a id inside of a form,  we delcaring guess, so we can manipulate changes in the number inout
+
 function submitGuess() {
-    var guessInput = document.getElementById("guessInput");
-    var guess = guessInput.value;
+    let guessInput = document.getElementById("guessInput"); //targets the number input in html 
+    let guess = guessInput.value; //targets the number value
 
     if (!guess) {
         guessInput.setCustomValidity("Please enter a guess.");
@@ -25,6 +28,7 @@ function submitGuess() {
         guessInput.value = "";
     }
 }
+
 
 
 
