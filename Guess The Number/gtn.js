@@ -6,7 +6,7 @@
 
 function submitGuess() {
     let guessInput = document.getElementById("guessInput"); //targets the number input in html 
-    let guess = guessInput.value; //targets the number value
+    let guess = guessInput.value; //targets the number value and stores number data
 
     if (!guess) {
         guessInput.setCustomValidity("Please enter a guess.");
