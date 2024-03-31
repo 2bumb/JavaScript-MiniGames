@@ -20,7 +20,7 @@ function submitGuess() {
         if (currentGuesses) {
             previousGuesses.innerText = currentGuesses + ", " + guess;
         } else {
-            previousGuesses.innerText ="Previous Guesses"+ guess;
+            previousGuesses.innerText ="Previous Guesses:" + " " + guess;
         }
         
         // Clear the input field after submitting the guess
