@@ -140,7 +140,7 @@ color:rgb(0, 0, 134)}
 .tilted-topright:hover{
 
 
-    animation: moveUp 1.34s ease-in-out infinite; }
+    animation: moveUp 1.5s ease-in-out infinite; }
 
     @keyframes moveUp {
       
