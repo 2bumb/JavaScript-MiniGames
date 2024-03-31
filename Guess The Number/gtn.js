@@ -34,9 +34,9 @@ function submitGuess() {
 
 
 //when the number 21 is hovered, the audio with the id "meme21audio" wil be played
-function play21hover(){
-   document.querySelector('.tilted-left').addEventListener('mouseover', function() {
+function play21click(){
+   document.querySelector('.tilted-left').addEventListener('click', function() {
     document.getElementById('meme21Audio').play();
 });
 }
-play21hover();
+play21click();
