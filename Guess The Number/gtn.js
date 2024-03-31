@@ -2,14 +2,13 @@
 
 //This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
 
-//We are targetting guess Input which is a id inside of a form,  we delcaring guess, so we can manipulate changes in the number inout
-
+//We are targetting guess Input which is a id inside of a form,  we delcaring guess, so we can manipulate changes in the number input
 function submitGuess() {
     let guessInput = document.getElementById("guessInput"); //targets the number input in html 
-    let guess = guessInput.value; //targets the number value and stores number data
+    let guess = parseInt(guessInput.value); //targets the number value and stores number data //parseInt means we are converting our input which is a string by default into a number/integer 
 
-    if (!guess) {
-        guessInput.setCustomValidity("Please enter a guess.");
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+        guessInput.setCustomValidity("Please enter a number between 1 and 100.");
         guessInput.reportValidity();
     } else {
         // Your logic for submitting the guess
@@ -28,7 +27,6 @@ function submitGuess() {
         guessInput.value = "";
     }
 }
-
 
 
 
