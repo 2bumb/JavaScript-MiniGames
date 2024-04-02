@@ -22,7 +22,7 @@ function submitGuess() {
     let guess = parseInt(guessInput.value); //targets the number value and stores number data //parseInt means we are converting our input which is a string by default into a number/integer 
 
     if (isNaN(guess) || guess < 1 || guess > 10) { //if "if (isNaN(guess)"we are checking if something is not a number ex: hello is a string so it will be true || is means or.  guess < 1 || guess > 100) mean the guess must be less than 1 or greater than 100
-        guessInput.setCustomValidity("Please enter a number between 1 and 100.");
+        guessInput.setCustomValidity("Please enter a number between 1 and 10.");
         guessInput.reportValidity();
     } else {
         // Your logic for submitting the guess
