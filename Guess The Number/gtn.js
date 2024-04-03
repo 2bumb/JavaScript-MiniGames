@@ -61,12 +61,36 @@ function play21click(){
 play21click();
 
 
+
+
+
 function homeclick() {
     console.log("Home button clicked!");
-    var homecard = document.getElementById("homecardAudio");
-            
-    // Play the audio
-    homecard.play();
-    window.location.href = "/Index.FrontPage/index.html";
+    var homecardAudio = document.getElementById("homecardAudio");
+
+    // Check if the audio element exists
+    if (homecardAudio) {
+        console.log("Audio element found:", homecardAudio);
+        
+        // Play the audio
+        homecardAudio.play();
+        
+        // When the audio ends, navigate to the new page
+        homecardAudio.addEventListener('ended', function() {
+            console.log("Audio ended, navigating to the new page...");
+            window.location.href = "/Index.FrontPage/index.html";
+        });
+    } else {
+        console.log("Audio element not found!");
+    }
 }
+
+// function homeclick() {
+//     console.log("Home button clicked!");
+//     var homecard = document.getElementById("homecardAudio");
+            
+ 
+//     homecard.play();
+//     window.location.href = "/Index.FrontPage/index.html";
+// }
 
