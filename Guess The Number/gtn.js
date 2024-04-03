@@ -13,7 +13,7 @@ function submitGuess() {
         answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
         console.log(answer);
         randomNumberGenerated = true;
-        document.querySelector('.answer').innerText = "Answer" + " " + answer;
+        document.querySelector('.answer').innerText = "Answer";
     }
 
     let guessInput = document.getElementById("guessInput");
