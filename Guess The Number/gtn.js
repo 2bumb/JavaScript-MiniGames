@@ -37,14 +37,17 @@ function submitGuess() {
 
         // Check if the user's guess matches the randomly generated number
         if (guess === answer) {
-            document.querySelector('.answer').innerText = "You win!!";
-        }else if (guess<answer)
-        {   document.querySelector('.answer').innerText = "The number is too low";}
-        else if (guess>answer)
-        {   document.querySelector('.answer').innerText = "The number is too high";}
-    }
+            document.querySelector('.answer').innerText = "You win!!"; //if user guess is the same as the answer, the player wins!!
+            document.querySelector('.answer').style.fontSize = "4.5vmin";
+        } else if (guess < answer) {
+            document.querySelector('.answer').innerText = "The number is too low"; //if the user guess is lower than answer, 
+            document.querySelector('.answer').style.fontSize = "2vmin";
+        } else if (guess > answer) {
+            document.querySelector('.answer').innerText = "The number is too high";
+            document.querySelector('.answer').style.fontSize = "2vmin";
+        }
+    }        
 }
-
 
 
 
