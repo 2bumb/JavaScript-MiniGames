@@ -38,7 +38,10 @@ function submitGuess() {
         // Check if the user's guess matches the randomly generated number
         if (guess === answer) {
             document.querySelector('.answer').innerText = "You win!!";
-        }
+        }else if (guess<answer)
+        {   document.querySelector('.answer').innerText = "The number is too low";}
+        else if (guess>answer)
+        {   document.querySelector('.answer').innerText = "The number is too high";}
     }
 }
 
