@@ -61,15 +61,12 @@ function play21click(){
 play21click();
 
 
-
 function homeclick() {
-    var homecardAudio = document.getElementById("homecardAudio");
-    
+    console.log("Home button clicked!");
+    var homecard = document.getElementById("homecardAudio");
+            
     // Play the audio
-    homecardAudio.play();
-  
-    // When the audio ends, navigate to the new page
-    homecardAudio.addEventListener('ended', function() {
-      window.location.href = "/Index.FrontPage/index.html";
-    });
-  }
+    homecard.play();
+    window.location.href = "/Index.FrontPage/index.html";
+}
+
