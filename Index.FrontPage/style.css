@@ -66,3 +66,97 @@ div .rps-container{font-size: 100px;
 
 a{text-decoration: none;
 color: black;}
+
+/* styling for box 2 "Guess The Game" */
+
+
+
+.box .head-title{padding-bottom:245px;}  /* remove this later this is just temporary */
+
+
+.box h1{color: black;}
+
+.head-title {
+    position: relative;
+    text-align: center;
+}
+
+.tilted-left,
+.tilted-right,
+.tilted-middle,
+.tilted-middleleft,
+.tilted-topright {
+    font-size: 3em;
+    position: absolute;
+    transition: top 1s ease; /* Transition for smooth movement */
+    top: -35px; /* Adjust this value to position the numbers higher */
+}
+
+.tilted-left {
+    left: 0;
+    transform: rotate(-5deg);
+    color:rgb(255, 166, 0);
+cursor: pointer;
+}
+
+.tilted-right {
+    right: 0;
+    transform: rotate(5deg);
+    color:green;
+}
+
+.tilted-middle {
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg); 
+    color:rgb(235, 231, 14)
+}
+.tilted-middleleft{left: 22%;
+    font-size: 2em;
+    margin: 0 22px;
+    transform: translateX(-50%) rotate(-5deg);
+color:blue}
+
+    .tilted-topright{  font-size: 2em;
+        transform: rotate(-5deg);
+    right:50px;
+    color: red;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* hover section */
+.tilted-topright:hover{  
+color: rgb(196, 0, 0);
+}
+
+.tilted-middleleft:hover{
+color:rgb(0, 0, 134)}
+
+.tilted-middle:hover{
+    color:rgb(255, 252, 103)
+}
+.tilted-left:hover {
+
+    color:rgb(255, 208, 121)
+
+}
+.tilted-right:hover{
+ 
+    color:rgb(53, 255, 53);
+}
+
+
+
+.tilted-left:hover,
+.tilted-right:hover,
+.tilted-middle:hover,
+.tilted-middleleft:hover,
+.tilted-topright:hover{
+
+
+    animation: moveUp 1.5s ease-in-out infinite; }
+
+    @keyframes moveUp {
+      
+        50% { top: 10px; } /* Move up gradually */
+        100% { top: 10; } /* Return to original position */
+    }
