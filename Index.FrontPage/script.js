@@ -1,4 +1,4 @@
-//When user clicks on the cards audio will be played
+//When user clicks on the cards audio will be played for rock paper scissors
 document.getElementById("rpsLink").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
     document.getElementById("homecardAudio").play(); // Play audio
