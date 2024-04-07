@@ -40,7 +40,7 @@ function submitGuess() {
         if (guess === answer) {
             document.querySelector('.answer').innerText = "You win!!"; //if user guess is the same as the answer, the player wins!!
             document.querySelector('.answer').style.fontSize = "4.5vmin";
-        } else if (Math.abs(guess - answer) <= warmRange) {
+        } else if (Math.abs(guess - answer) <= warmRange) { 
             document.querySelector('.answer').innerText = "You're getting warm!"; // if the guess is close to the answer just for a reminder remeber putting the condition near the top will be priortize that's why the message of the code wasnt working correctly 
             document.querySelector('.answer').style.fontSize = "2vmin";
         }else if (guess < answer) {
