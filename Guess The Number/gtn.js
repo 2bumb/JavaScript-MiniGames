@@ -22,6 +22,7 @@ function submitGuess() {
     if (isNaN(guess) || guess < 1 || guess > 10) {
         guessInput.setCustomValidity("Please enter a number between 1 and 10.");
         guessInput.reportValidity();
+        document.getElementById('negativeaudio').play();
     } else {
         console.log("Submitted guess:", guess);
 
