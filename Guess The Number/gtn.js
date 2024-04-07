@@ -8,7 +8,7 @@ let answer;
 function submitGuess() {
     const minNum = 1;
     const maxNum = 10;
-
+    const warmRange = 1;
     if (!randomNumberGenerated) {
         answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
         console.log(answer);
@@ -40,7 +40,10 @@ function submitGuess() {
         if (guess === answer) {
             document.querySelector('.answer').innerText = "You win!!"; //if user guess is the same as the answer, the player wins!!
             document.querySelector('.answer').style.fontSize = "4.5vmin";
-        } else if (guess < answer) {
+        } else if (Math.abs(guess - answer) <= warmRange) {
+            document.querySelector('.answer').innerText = "You're getting warm!"; // if the guess is close to the answer just for a reminder remeber putting the condition near the top will be priortize that's why the message of the code wasnt working correctly 
+            document.querySelector('.answer').style.fontSize = "2vmin";
+        }else if (guess < answer) {
             document.querySelector('.answer').innerText = "The number is too low"; //if the user guess is lower than answer, 
             document.querySelector('.answer').style.fontSize = "2vmin";
         } else if (guess > answer) {
