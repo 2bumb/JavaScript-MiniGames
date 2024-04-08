@@ -43,12 +43,15 @@ function submitGuess() {
         } else if (Math.abs(guess - answer) <= warmRange) { 
             document.querySelector('.answer').innerText = "TSS!! You're getting warm!"; // if the guess is close to the answer just for a reminder remeber putting the condition near the top will be priortize that's why the message of the code wasnt working correctly 
             document.querySelector('.answer').style.fontSize = "2vmin";
+            document.getElementById('TSaudio').play();
         }else if (guess < answer) {
             document.querySelector('.answer').innerText = "BRR!! The number is too low"; //if the user guess is lower than answer, 
             document.querySelector('.answer').style.fontSize = "2vmin";
+            document.getElementById('BrrColdaudio').play();
         } else if (guess > answer) {
             document.querySelector('.answer').innerText = "BRR!! The number is too high";
             document.querySelector('.answer').style.fontSize = "2vmin";
+            document.getElementById('BrrColdaudio').play();
         }
     }        
 }
