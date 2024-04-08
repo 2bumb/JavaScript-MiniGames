@@ -92,7 +92,7 @@ function homeclick() {
         console.log("Audio element not found!");
     }
 }
-
+//this will reset the game 
 function refreshClick() {
     // Reset the randomNumberGenerated flag
     randomNumberGenerated = false;
