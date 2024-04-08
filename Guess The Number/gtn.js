@@ -120,12 +120,12 @@ function refreshClick() {
 
 
 
-// promptJohn
+ 
 // let guessList = ["John","Tim","Joe"];
 // let guestName = prompt("what is your name?");
 
 
-// guessList.includes(guestName)
+// guessList.includes(guestName);
 
  
  
