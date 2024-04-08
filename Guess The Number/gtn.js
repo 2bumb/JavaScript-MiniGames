@@ -117,3 +117,15 @@ function refreshClick() {
 //     window.location.href = "/Index.FrontPage/index.html";
 // }
 
+
+
+
+// promptJohn
+// let guessList = ["John","Tim","Joe"];
+// let guestName = prompt("what is your name?");
+
+
+// guessList.includes(guestName)
+
+ 
+ 
