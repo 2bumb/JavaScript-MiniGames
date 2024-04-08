@@ -93,6 +93,21 @@ function homeclick() {
     }
 }
 
+function refreshClick() {
+    // Reset the randomNumberGenerated flag
+    randomNumberGenerated = false;
+    
+    // Clear the previous guesses display
+    document.getElementById("previousguest").innerText = "";
+    
+    // Clear the answer display
+    document.querySelector('.answer').innerText = "";
+    
+    // Clear the guess input field
+    document.getElementById("guessInput").value = "";
+}
+
+
 // function homeclick() {
 //     console.log("Home button clicked!");
 //     var homecard = document.getElementById("homecardAudio");
