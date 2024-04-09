@@ -93,7 +93,11 @@ function homeclick() {
     }
 }
 //this will reset the game 
+// Function to handle button click
 function refreshClick() {
+    // Add the spin-animation class to the button
+    document.getElementById("refreshButton").classList.add("spin-animation");
+    
     // Reset the randomNumberGenerated flag
     randomNumberGenerated = false;
     
@@ -105,6 +109,11 @@ function refreshClick() {
     
     // Clear the guess input field
     document.getElementById("guessInput").value = "";
+    
+    // Remove the spin-animation class after the animation completes
+    setTimeout(function() {
+        document.getElementById("refreshButton").classList.remove("spin-animation");
+    }, 400); // 1000ms is the duration of your animation
 }
 
 
