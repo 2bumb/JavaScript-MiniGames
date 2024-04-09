@@ -114,6 +114,8 @@ function refreshClick() {
     setTimeout(function() {
         document.getElementById("refreshButton").classList.remove("spin-animation");
     }, 400); // 1000ms is the duration of your animation
+    document.getElementById('refreshAudio').play();
+    
 }
 
 
