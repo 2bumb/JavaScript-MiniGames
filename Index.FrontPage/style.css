@@ -171,9 +171,23 @@ padding-bottom: 10px;}
  
 .head-title .gtn-title h1{font-size: 11.7vmin;}
 
-.comingsoon{ 
+/* .comingsoon{ 
     font-size: 6vmin;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: normal;}
     
+     */
+
+     .comingsoon {
+        font-size: 6vmin;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: normal;
+        color: transparent;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(90deg, #007bff, #00ffff, #007bff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: wave 2s linear infinite;
+    }
     
