@@ -199,12 +199,18 @@ padding-bottom: 10px;}
         font-size: 3.5em;
         position: absolute;
         font-family: "Poppins", sans-serif;
+        align-items: center;
+        justify-items: center;
+
     }
     
     .comingsoon:nth-child(1) {
         color: transparent;
-        -webkit-text-stroke: 3px black;
+        -webkit-text-stroke: 3px rgb(13, 99, 211);
         filter: blur(0,53px);
+        align-items: center;
+        justify-items: center;
+
       }
       
     
@@ -212,6 +218,9 @@ padding-bottom: 10px;}
         color:blue;
         animation: animate 4s ease-in-out infinite;
           font-family: "Poppins", sans-serif;
+          align-items: center;
+          justify-items: center;
+  
     }
     
     @keyframes animate {
