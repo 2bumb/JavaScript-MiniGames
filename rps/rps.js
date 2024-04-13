@@ -26,6 +26,9 @@ let computerResult = 0;
 function playgame(playerChoice){ //playgame is from my html when the user clicks on the 3 options r.p.s the computer will also pick a option 
   
   //playerChoice receives the values of the function and stores it when called so  when I need information of the function I call playerChoice
+  //calling a function runs the entire code while calling a parameter calls for values in the function 
+
+  //When you call a function, you're instructing the program to execute a block of code. Calling a parameter within a function is more about providing specific values or data to be used within that block of code.
 
   const computerChoice = choices[Math.floor(Math.random() * 3)]; 
    let result  =" winAudio.play();"
