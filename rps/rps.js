@@ -36,7 +36,7 @@ function playgame(playerChoice){ //playgame is from my html when the user clicks
   // let result  =" winAudio.play();"// I might not need this code
 
 
-if(playerChoice === computerChoice){
+if(playerChoice === computerChoice){ //if the plyer and computer pick the same answer EX: Rock the game will result to a tiew
 
     result="Tie!"; tieAudio.play(); ;
 }
