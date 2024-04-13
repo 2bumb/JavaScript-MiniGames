@@ -31,7 +31,9 @@ function playgame(playerChoice){ //playgame is from my html when the user clicks
   //When you call a function, you're instructing the program to execute a block of code. Calling a parameter within a function is more about providing specific values or data to be used within that block of code.
 
   const computerChoice = choices[Math.floor(Math.random() * 3)]; // choices[] is an array holding values for the computer to pick without choices the computer will picka number between 1 and 3
-   let result  =" winAudio.play();"
+   
+  
+  let result  =" winAudio.play();"// I might not need this code
 
 
 if(playerChoice === computerChoice){
