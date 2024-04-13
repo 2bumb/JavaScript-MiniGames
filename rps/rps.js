@@ -35,10 +35,11 @@ function playgame(playerChoice){ //playgame is from my html when the user clicks
   
   // let result  =" winAudio.play();"// I might not need this code
 
+//In this if statement we are saying if tie say tie and play audio else match find user choice example the player pick rock and the computer picked scissors, the if statement will look for the matching case
 
-if(playerChoice === computerChoice){ //if the plyer and computer pick the same answer EX: Rock the game will result to a tiew
+if(playerChoice === computerChoice){ //if the plyer and computer pick the same answer EX: Rock the game will result to a tie
 
-    result="Tie!"; tieAudio.play(); ;
+    result="Tie!"; tieAudio.play(); 
 }
 else{
     switch(playerChoice){
