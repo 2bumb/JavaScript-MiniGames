@@ -23,7 +23,9 @@ let computerResult = 0;
 
   //when the player clicks on the button, the computer will choice between rock paper scissors
  
-function playgame(playerChoice){ //playgame is from my html when the user clicks on the 3 options r.p.s the computer will also pick a option
+function playgame(playerChoice){ //playgame is from my html when the user clicks on the 3 options r.p.s the computer will also pick a option 
+  
+  //playerChoice receives the values of the function and stores it when called so  when I need information of the function I call playerChoice
 
   const computerChoice = choices[Math.floor(Math.random() * 3)]; 
    let result  =" winAudio.play();"
