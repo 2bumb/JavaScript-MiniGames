@@ -33,7 +33,7 @@ function playgame(playerChoice){ //playgame is from my html when the user clicks
   const computerChoice = choices[Math.floor(Math.random() * 3)]; // choices[] is an array holding values for the computer to pick without choices the computer will picka number between 1 and 3
    
   
-  let result  =" winAudio.play();"// I might not need this code
+  // let result  =" winAudio.play();"// I might not need this code
 
 
 if(playerChoice === computerChoice){
