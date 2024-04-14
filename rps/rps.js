@@ -41,7 +41,7 @@ if(playerChoice === computerChoice){ //if the plyer and computer pick the same a
 
     result="Tie!"; tieAudio.play(); 
 }
-else{
+else{ //switches like the variable which has a value while the cases are the conditions and if condiditions are meet than  the code will activate for that certain case 
     switch(playerChoice){
         case "✊🏼":
             result = (computerChoice === "✌🏼") ? "YOU WIN!": "YOU LOSE";
