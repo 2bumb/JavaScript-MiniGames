@@ -62,10 +62,10 @@ computerDisplay.textContent = ` ${computerChoice}`;
 gameResult.textContent = result;
 
 //
-gameResult.classList.remove("greenText", "redText");
+gameResult.classList.remove("greenText", "redText"); //when are using this code so the tie wont have a color when tie is displyed
 
 
-switch(result){
+switch(result){  //we have this switch(result), so we can have color, points counter by 1 point, display score, and have audio whne player wins or lose
   case "YOU WIN!":
     gameResult.classList.add("greenText");
  playerResult++;
