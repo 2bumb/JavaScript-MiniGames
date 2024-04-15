@@ -100,7 +100,7 @@ function refreshFunction() {
 
 
 // refresh button animation 
-
+//need to learn more about add eventlistners
 
 
 function startSpinningAndThenRefresh() {
