@@ -66,7 +66,7 @@ gameResult.classList.remove("greenText", "redText"); //when are using this code 
 
 
 switch(result){  //we have this switch(result), so we can have color, points counter by 1 point, display score, and have audio whne player wins or lose
-  case "YOU WIN!":
+  case "YOU WIN!": //in "YOU WIN": This means : used to identify the values of the case
     gameResult.classList.add("greenText");
  playerResult++;
  playerScoreResult.textContent = playerResult;
