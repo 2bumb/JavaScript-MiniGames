@@ -110,7 +110,8 @@ function startSpinningAndThenRefresh() {
   refreshIcon.classList.add("spin-animation");
 
   // Set a timeout to execute the refresh function after animation
-  setTimeout(function() {
+  setTimeout(function() { //we created a  setTimeout() we can also use arrow function for consice clean code setTimeout(() =>);
+
       // Call the refresh function after the animation ends
       refreshFunction();
       // Remove spinning animation class
