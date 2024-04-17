@@ -137,4 +137,6 @@ function homeclick() { //when homeclick is clicked once the audio is over the us
   homecardAudio.addEventListener('ended', function() {// ('ended', function() is a addEventListener which needs a event and also a function to run
     window.location.href = "/Index.FrontPage/index.html";
   });
+
+   
 }
