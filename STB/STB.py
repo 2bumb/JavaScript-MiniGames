@@ -1,0 +1,4 @@
+print("stb")
+
+name = "STB"
+
