@@ -1,23 +1,17 @@
 
 
+function homeclick() { //when homeclick is clicked once the audio is over the user will  be placed to a new href
 
-function homeclick() {
-    console.log("Home button clicked!");
+
     var homecardAudio = document.getElementById("homecardAudio");
-
-    // Check if the audio element exists
-    if (homecardAudio) {
-        console.log("Audio element found:", homecardAudio);
-        
-        // Play the audio
-        homecardAudio.play();
-        
-        // When the audio ends, navigate to the new page
-        homecardAudio.addEventListener('ended', function() {
-            console.log("Audio ended, navigating to the new page...");
-            window.location.href = "/STB/STB.html";
-        });
-    } else {
-        console.log("Audio element not found!");
-    }
-}
+    
+    // Play the audio
+    homecardAudio.play();
+  
+   
+    homecardAudio.addEventListener('ended', function() {// ('ended', function() is a addEventListener which needs a event and also a function to run
+      window.location.href = "/Index.FrontPage/index.html";
+    });
+  
+     
+  }
