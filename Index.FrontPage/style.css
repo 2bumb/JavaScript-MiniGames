@@ -259,3 +259,15 @@ padding-bottom: 10px;}
 font-size: 8vmin;   
 align-items: center; 
 text-align:center;}
+
+
+.STB-img img{width: 180px;
+max-width: 200px;
+padding:2px 0px}
+
+.STB-img{
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+   
+}
