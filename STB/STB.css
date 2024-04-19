@@ -6,12 +6,9 @@ body{
 
     }
 .container-shadowbox{ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin: 10px 0;}
+    margin: 10px 0;
+    text-align: center;}
 
     .imgfist img{width: 200px;}
-
-    .imgfist {text-align: center;}
-
-    .head-title{text-align: center;}
 
     
