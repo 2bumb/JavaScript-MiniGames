@@ -11,4 +11,36 @@ body{
 
     .imgfist img{width: 200px;}
 
+
+    .container-start{padding: 10px 0;}
+
+
+    button {
+        padding: 10px 50px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #008cff;
+        text-shadow: none;
+ 
+        cursor: pointer;
+        box-shadow: transparent;
+        border: 1px solid #ffffff80;
+        transition: 0.5s ease;
+        user-select: none;
+      }
+      
+      .startbutton:hover,
+      :focus {
+        color: #ffffff;
+        background: #008cff;
+        border: 1px solid #008cff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+          0 0 100px #008cff;
+      }
+
+      .startbutton{color: white;}
+
     
