@@ -13,7 +13,7 @@ function startclick() {
 
   // Update button text
   document.getElementById("startrefreshdisplay").textContent = "32b";
-  document.getElementById("startrefreshdisplay").innerHTML = '<i class="fa-solid fa-play" style="color: white;"></i> 32b';
+  document.getElementById("startrefreshdisplay").innerHTML = '<i class="fa-solid fa-play" style="color: white;"></i>Retry';
 }
 
  
