@@ -42,7 +42,11 @@ body{
 
       .startbutton{color: white;}
 
-      .startbutton:hover,
-      :focus {
+      .startbutton.clicked {
      background: rgb(68, 196, 255);
+     
+  
       }
+      /* #playIcon {
+        background: rgb(68, 196, 255);
+      } */
