@@ -1,7 +1,7 @@
 const startrefreshdisplay = document.getElementById("startrefreshdisplay");
 const fasolidfaplay = document.getElementByClassName("fasolidfaplay");
 
-
+//Startbutton
 function startclick() {
   const startButton = document.querySelector(".startbutton");
   const playIcon = document.getElementById("playIcon");
