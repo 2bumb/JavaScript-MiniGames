@@ -45,7 +45,10 @@ document.addEventListener('keyup', spacebarUpHandler);
 startButton.addEventListener('click', startclick);
 
 
-
+//Timer
+ const timer = document.getElementById 
+ let tiemr = null;
+ 
 
 
 
