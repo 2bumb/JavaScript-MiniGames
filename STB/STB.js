@@ -10,7 +10,7 @@ function startclick() {
   // Change button background color to baby blue
   startButton.style.backgroundColor = "rgb(68, 196, 255)";
   // Update button text
-  startrefreshdisplay.textContent = "32b";
+ 
   startrefreshdisplay.innerHTML = '<i class="fa-solid fa-play" style="color: white;"></i> Retry';
 }
 
@@ -33,6 +33,7 @@ function spacebarUpHandler(event) {
   if (event.keyCode === 32) { // Check if the released key is spacebar
     spacebarPressed = false; // Reset the flag when spacebar is released
   }
+
 }
 
 // Add event listener for spacebar keydown event
