@@ -2,7 +2,7 @@ const startButton = document.querySelector(".startbutton");
 const playIcon = document.getElementById("playIcon");
 const startrefreshdisplay = document.getElementById("startrefreshdisplay");
 const clickcounter = document.getElementById("clickcounter");
-const messages = ['START', 'RETRY'];
+const messages = ['Start', 'Retry'];
 let spacebarPressed = false; // Flag to track whether spacebar is pressed
 
 // Function to handle start button click
