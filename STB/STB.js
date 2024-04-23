@@ -51,7 +51,7 @@ startButton.addEventListener('click', startclick);
  let tiemr = null;
  
 
-
+//array function so the button can rest and start when click
 
 
 
