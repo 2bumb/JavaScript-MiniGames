@@ -73,3 +73,17 @@ function homeclick() { //when homeclick is clicked once the audio is over the us
   
      
   }
+
+
+  
+  // function startclick() {
+ 
+  //   startButton.style.backgroundColor = "rgb(68, 196, 255)";
+ 
+  //   if (startButton.textContent.trim() === "Start") {
+  //     startButton.textContent = "Retry";
+  //   } else {
+  //     startButton.textContent = "Start";
+  //     startButton.style.backgroundColor = "";
+  //   }
+  // }
