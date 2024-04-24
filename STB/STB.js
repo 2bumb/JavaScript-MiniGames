@@ -11,6 +11,7 @@ function mouseClickHandler() {
   } else {
     startButton.textContent = "Start";
     startButton.style.backgroundColor = ""; // Remove background color for Start
+    clickcounter.innerText = "0";
   }
 }
 
