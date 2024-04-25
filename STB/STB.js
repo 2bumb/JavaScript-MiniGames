@@ -6,7 +6,8 @@ let spacebarPressed = false; // Flag to track whether spacebar is pressed
 function mouseClickHandler() {
   // Toggle button text between "Start" and "Retry" when clicked with the mouse
   if (startButton.textContent === "Start") {
-    startButton.textContent = "Retry";
+    startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
+
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
   } else {
     startButton.textContent = "Start";
@@ -19,7 +20,8 @@ function mouseClickHandler() {
 function spacebarPressHandler(event) {
   if (event.keyCode === 32 && !spacebarPressed) { // Check if the pressed key is spacebar and spacebar is not already pressed
     // Change button text to "Retry" only once
-    startButton.textContent = "Retry";
+    startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
+
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Prevent default spacebar behavior (scrolling the page)
