@@ -1,20 +1,29 @@
 const startButton = document.querySelector(".startbutton");
 const clickcounter = document.getElementById("clickcounter");
 let spacebarPressed = false; // Flag to track whether spacebar is pressed
+let clickCount = 0;
 
 // Function to handle mouse click on the button
 function mouseClickHandler() {
-  // Toggle button text between "Start" and "Retry" when clicked with the mouse
-  if (startButton.textContent === "Start") {
-    startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
+  clickCount++; // Increment the click count on each click
 
+  // Check if the current text is "Start"
+  if (startButton.textContent.trim() === "Start") {
+    // If the text is "Start", change it to "Retry"
+    startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
   } else {
+    // If the text is not "Start", change it back to "Start"
     startButton.textContent = "Start";
     startButton.style.backgroundColor = ""; // Remove background color for Start
     clickcounter.innerText = "0";
+    clickCount = 0; // Reset click count
   }
 }
+
+// Add event listener for mouse click on the button
+startButton.addEventListener('click', mouseClickHandler);
+
 
 // Function to handle spacebar key press
 function spacebarPressHandler(event) {
