@@ -14,7 +14,7 @@ function mouseClickHandler() {
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
   } else {
     // If the text is not "Start", change it back to "Start"
-    startButton.textContent = "Start";
+    startButton.innerHTML = '<span id="startrefreshdisplay"><i id="playIcon" class="fa-solid fa-play" style="color: #ffffff;"></i> Start</span>';
     startButton.style.backgroundColor = ""; // Remove background color for Start
     clickcounter.innerText = "0";
     clickCount = 0; // Reset click count
