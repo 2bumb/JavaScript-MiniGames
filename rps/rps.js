@@ -126,7 +126,7 @@ function startSpinningAndThenRefresh() {
 //Functin is used when client clicks on the home button
 
 function homeclick() { //when homeclick is clicked once the audio is over the user will  be placed to a new href
-
+//we used event listner, when the audio ends we the client is now switched to the main page
 
   var homecardAudio = document.getElementById("homecardAudio");
   
