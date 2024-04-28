@@ -2,6 +2,7 @@ const startButton = document.querySelector(".startbutton");
 const clickcounter = document.getElementById("clickcounter");
 let spacebarPressed = false; // Flag to track whether spacebar is pressed
 let clickCount = 0;
+let timerInterval; // Variable to store the timer interval
 
 // Function to handle mouse click on the button
 function mouseClickHandler() {
@@ -18,34 +19,33 @@ function mouseClickHandler() {
     startButton.style.backgroundColor = ""; // Remove background color for Start
     clickcounter.innerText = "0";
     clickCount = 0; // Reset click count
+    clearInterval(timerInterval); // Stop the timer
+    startTimer(11); // Reset the timer
   }
 }
 
 function startTimer(timeLeft) {
   function timerOn() {
-      timeLeft--;
-      document.getElementById("timer").innerHTML = String(timeLeft);
-      if (timeLeft > 0) {
-          setTimeout(timerOn, 1000);
-      }
+    timeLeft--;
+    document.getElementById("timer").innerHTML = String(timeLeft);
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
+    }
   }
-  setTimeout(timerOn, 1000);
+  timerInterval = setInterval(timerOn, 1000);
 }
 
 // To start the timer with an initial timeLeft value of 11:
 startTimer(11);
-//
 
 // Add event listener for mouse click on the button
 startButton.addEventListener('click', mouseClickHandler);
-
 
 // Function to handle spacebar key press
 function spacebarPressHandler(event) {
   if (event.keyCode === 32 && !spacebarPressed) { // Check if the pressed key is spacebar and spacebar is not already pressed
     // Change button text to "Retry" only once
     startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
-
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Prevent default spacebar behavior (scrolling the page)
@@ -63,41 +63,17 @@ function spacebarReleaseHandler(event) {
   }
 }
 
-// Add event listener for mouse click on the button
-startButton.addEventListener('click', mouseClickHandler);
-
 // Add event listener for spacebar key press
 document.addEventListener('keydown', spacebarPressHandler);
 
 // Add event listener for spacebar key release
 document.addEventListener('keyup', spacebarReleaseHandler);
 
- 
 function homeclick() { //when homeclick is clicked once the audio is over the user will  be placed to a new href
-
-
   var homecardAudio = document.getElementById("homecardAudio");
-  
   // Play the audio
   homecardAudio.play();
-
- 
-  homecardAudio.addEventListener('ended', function() {// ('ended', function() is a addEventListener which needs a event and also a function to run
+  homecardAudio.addEventListener('ended', function() { // ('ended', function() is a addEventListener which needs a event and also a function to run
     window.location.href = "/Index.FrontPage/index.html";
   });
-
-   
 }
-
-  
-  // function startclick() {
- 
-  //   startButton.style.backgroundColor = "rgb(68, 196, 255)";
- 
-  //   if (startButton.textContent.trim() === "Start") {
-  //     startButton.textContent = "Retry";
-  //   } else {
-  //     startButton.textContent = "Start";
-  //     startButton.style.backgroundColor = "";
-  //   }
-  // }
