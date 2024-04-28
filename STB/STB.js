@@ -21,6 +21,17 @@ function mouseClickHandler() {
   }
 }
 
+timeLeft = 11;
+function TimerOn(){
+	timeLeft--;
+	document.getElementById("timer").innerHTML = String( timeLeft );
+	if (timeLeft > 0) {
+		setTimeout(TimerOn, 1000);
+	}
+};
+
+setTimeout(TimerOn, 1000);//
+
 // Add event listener for mouse click on the button
 startButton.addEventListener('click', mouseClickHandler);
 
