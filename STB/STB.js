@@ -20,26 +20,9 @@ function mouseClickHandler() {
     clickcounter.innerText = "0";
     clickCount = 0; // Reset click count
     clearInterval(timerInterval); // Stop the timer
-    startTimer(11); // Reset the timer
+    startTimer(11); // Restart the timer
   }
 }
-
-function startTimer(timeLeft) {
-  function timerOn() {
-    timeLeft--;
-    document.getElementById("timer").innerHTML = String(timeLeft);
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
-    }
-  }
-  timerInterval = setInterval(timerOn, 1000);
-}
-
-// To start the timer with an initial timeLeft value of 11:
-startTimer(11);
-
-// Add event listener for mouse click on the button
-startButton.addEventListener('click', mouseClickHandler);
 
 // Function to handle spacebar key press
 function spacebarPressHandler(event) {
@@ -50,6 +33,10 @@ function spacebarPressHandler(event) {
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Prevent default spacebar behavior (scrolling the page)
     event.preventDefault();
+    // Start the timer if it hasn't started already
+    if (!timerInterval) {
+      startTimer(11);
+    }
     // Increment click counter
     let currentClickCount = parseInt(clickcounter.innerText.trim());
     clickcounter.innerText = currentClickCount + 1;
@@ -63,8 +50,23 @@ function spacebarReleaseHandler(event) {
   }
 }
 
+// Function to start the timer
+function startTimer(timeLeft) {
+  function timerOn() {
+    timeLeft--;
+    document.getElementById("timer").innerHTML = String(timeLeft);
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
+    }
+  }
+  timerInterval = setInterval(timerOn, 1000);
+}
+
+// Add event listener for mouse click on the button
+startButton.addEventListener('click', mouseClickHandler);
+
 // Add event listener for spacebar key press
-document.addEventListener('keydown', spacebarPressHandler);
+document.addEventListener('keydown', spacebarPressHandler);    
 
 // Add event listener for spacebar key release
 document.addEventListener('keyup', spacebarReleaseHandler);
@@ -77,3 +79,4 @@ function homeclick() { //when homeclick is clicked once the audio is over the us
     window.location.href = "/Index.FrontPage/index.html";
   });
 }
+   
