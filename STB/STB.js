@@ -25,23 +25,28 @@ function mouseClickHandler() {
 }
 
 // Function to handle spacebar key press
+// Function to handle spacebar key press
 function spacebarPressHandler(event) {
   if (event.keyCode === 32 && !spacebarPressed) { // Check if the pressed key is spacebar and spacebar is not already pressed
+    // Check if the timer is running and the timer is not 0
+    if (timerInterval && parseInt(document.getElementById("timer").innerHTML) > 0) {
+      // Increment click counter
+      let currentClickCount = parseInt(clickcounter.innerText.trim());
+      clickcounter.innerText = currentClickCount + 1;
+    }
+    spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Change button text to "Retry" only once
     startButton.innerHTML = 'Retry <i class="fas fa-repeat"></i>';
     startButton.style.backgroundColor = "rgb(68, 196, 255)"; // Set background color for Retry
-    spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Prevent default spacebar behavior (scrolling the page)
     event.preventDefault();
     // Start the timer if it hasn't started already
     if (!timerInterval) {
       startTimer(11);
     }
-    // Increment click counter
-    let currentClickCount = parseInt(clickcounter.innerText.trim());
-    clickcounter.innerText = currentClickCount + 1;
   }
 }
+
 
 // Function to handle spacebar key release
 function spacebarReleaseHandler(event) {
