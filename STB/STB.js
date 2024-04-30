@@ -17,22 +17,22 @@ function mouseClickHandler() {
     // If the text is not "Start", change it back to "Start"
     startButton.innerHTML = '<span id="startrefreshdisplay"><i id="playIcon" class="fa-solid fa-play" style="color: #ffffff;"></i> Start</span>';
     startButton.style.backgroundColor = ""; // Remove background color for Start
-    clickcounter.innerText = "0";
     clickCount = 0; // Reset click count
     clearInterval(timerInterval); // Stop the timer
     startTimer(11); // Restart the timer
   }
+  
+  // Update click counter display based on current count
+  clickcounter.innerText = clickCount;
 }
 
-// Function to handle spacebar key press
 // Function to handle spacebar key press
 function spacebarPressHandler(event) {
   if (event.keyCode === 32 && !spacebarPressed) { // Check if the pressed key is spacebar and spacebar is not already pressed
     // Check if the timer is running and the timer is not 0
-    if (timerInterval && parseInt(document.getElementById("timer").innerHTML) > 0) {
+    if (timerInterval && parseInt(document.getElementById("timer").innerHTML.split(": ")[1]) > 0) {
       // Increment click counter
-      let currentClickCount = parseInt(clickcounter.innerText.trim());
-      clickcounter.innerText = currentClickCount + 1;
+      clickcounter.innerText = parseInt(clickcounter.innerText.trim()) + 1;
     }
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Change button text to "Retry" only once
@@ -59,7 +59,8 @@ function spacebarReleaseHandler(event) {
 function startTimer(timeLeft) {
   function timerOn() {
     timeLeft--;
-    document.getElementById("timer").innerHTML = String(timeLeft);
+    // Update timer display with "Timer: " before the timeLeft value
+    document.getElementById("timer").innerHTML = "Timer: " + String(timeLeft); 
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
     }
@@ -84,4 +85,3 @@ function homeclick() { //when homeclick is clicked once the audio is over the us
     window.location.href = "/Index.FrontPage/index.html";
   });
 }
-   
