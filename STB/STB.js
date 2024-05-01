@@ -38,6 +38,7 @@ function spacebarPressHandler(event) {
       // Increment click counter
       clickcounter.innerText = parseInt(clickcounter.innerText.trim()) + 1;
       totalClicks++; // Increment total clicks
+      spacebarAudio.play();
     }
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Change button text to "Retry" only once
