@@ -20,6 +20,8 @@ function mouseClickHandler() {
     startButton.innerHTML = '<span id="startrefreshdisplay"><i id="playIcon" class="fa-solid fa-play" style="color: #ffffff;"></i> Start</span>';
     startButton.style.backgroundColor = ""; // Remove background color for Start
     clickCount = 0; // Reset click count
+    totalClicks = 0; // Reset total clicks
+    averageDisplay.innerText = ""; // Reset average display
     clearInterval(timerInterval); // Stop the timer
     startTimer(11); // Restart the timer
   }
