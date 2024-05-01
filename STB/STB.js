@@ -1,7 +1,9 @@
 const startButton = document.querySelector(".startbutton");
 const clickcounter = document.getElementById("clickcounter");
+const averageDisplay = document.getElementById("averageDisplay");
 let spacebarPressed = false; // Flag to track whether spacebar is pressed
 let clickCount = 0;
+let totalClicks = 0; // Variable to store total clicks
 let timerInterval; // Variable to store the timer interval
 
 // Function to handle mouse click on the button
@@ -33,6 +35,7 @@ function spacebarPressHandler(event) {
     if (timerInterval && parseInt(document.getElementById("timer").innerHTML.split(": ")[1]) > 0) {
       // Increment click counter
       clickcounter.innerText = parseInt(clickcounter.innerText.trim()) + 1;
+      totalClicks++; // Increment total clicks
     }
     spacebarPressed = true; // Set the flag to true to indicate spacebar is pressed
     // Change button text to "Retry" only once
@@ -46,7 +49,6 @@ function spacebarPressHandler(event) {
     }
   }
 }
-
 
 // Function to handle spacebar key release
 function spacebarReleaseHandler(event) {
@@ -63,9 +65,16 @@ function startTimer(timeLeft) {
     document.getElementById("timer").innerHTML = "Timer: " + String(timeLeft); 
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
+      calculateAverage(); // Calculate and display average clicks per second
     }
   }
   timerInterval = setInterval(timerOn, 1000);
+}
+
+// Function to calculate and display average clicks per second
+function calculateAverage() {
+  const average = totalClicks / 10; // Divide total clicks by the duration of the timer (11 - 1)
+  averageDisplay.innerText = "Average Clicks per Second: " + average.toFixed(2); // Display average clicks per second
 }
 
 // Add event listener for mouse click on the button
