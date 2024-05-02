@@ -86,7 +86,7 @@ function homeclick() {
         // When the audio ends, navigate to the new page
         homecardAudio.addEventListener('ended', function() {
             console.log("Audio ended, navigating to the new page...");
-            window.location.href = "/Index.FrontPage/index.html";
+            window.location.href = "/Index.html/index.html";
         });
     } else {
         console.log("Audio element not found!");
