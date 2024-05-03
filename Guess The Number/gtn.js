@@ -5,6 +5,7 @@ let answer;
 //This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
 
 //We are targeting guess Input which is an id inside of a form, we declare guessInput, so we can manipulate changes in the number input
+//delve more about how the code operates 
 function submitGuess() {
     const minNum = 1;
     const maxNum = 10;
