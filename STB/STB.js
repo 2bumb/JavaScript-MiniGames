@@ -69,7 +69,7 @@ function startTimer(timeLeft) {
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
       calculateAverage(); // Calculate and display average clicks per second
-      if (totalClicks > 100) {
+      if (totalClicks >= 100) {
         // Play audio for score over 100
         winAudio.play(); console.log("the audio works");
       } else {
