@@ -54,8 +54,8 @@ function spacebarPressHandler(event) {
 }
 
 // Function to handle spacebar key release
-function spacebarReleaseHandler(event) {
-  if (event.keyCode === 32) { // Check if the released key is spacebar
+function spacebarReleaseHandler(event) { 
+  if (event.keyCode === 32) { // Check if the released key is spacebar //spacebar 
     spacebarPressed = false; // Reset the flag when spacebar is released
   }
 }
