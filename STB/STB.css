@@ -59,3 +59,13 @@ body{
       /* #playIcon {
         background: rgb(68, 196, 255);
       } */
+      .blink {
+        animation: blink-animation 1s infinite; /* Blinking effect */
+      }
+      
+      @keyframes blink-animation {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
