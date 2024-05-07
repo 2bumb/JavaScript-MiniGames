@@ -26,8 +26,14 @@ function mouseClickHandler() {
     startTimer(11); // Restart the timer
   }
   
+  // Reset total clicks to 0 whenever the button is clicked
+  totalClicks = 0;
+
   // Update click counter display based on current count
   clickcounter.innerText = clickCount;
+
+  // Calculate average clicks per second when retry button is clicked
+  calculateAverage();
 }
 
 // Function to handle spacebar key press
@@ -104,33 +110,3 @@ function homeclick() { //when homeclick is clicked once the audio is over the us
     window.location.href = "/Index.html/index.html";
   });
 }
-
-
-// When the timer is up, the score and the text will blink (dont delete just incase you want to use the code later)
-
-// // Function to calculate and display average clicks per second
-// function calculateAverage() {
-//   const average = totalClicks / 10; // Divide total clicks by the duration of the timer (11 - 1)
-//   averageDisplay.innerText = "Average Clicks per Second: " + average.toFixed(2); // Display average clicks per second
-  
-//   // Add the blinking class to the score display
-//   averageDisplay.classList.add('blink');
-// }
-
-// Function to calculate and display average clicks per second
-// Function to calculate and display average clicks per second
-
-
-
-//I'll need to fix the text to not blink
-// Function to calculate and display average clicks per second
-function calculateAverage() {
-  const average = totalClicks / 10; // Divide total clicks by the duration of the timer (11 - 1)
-  const scoreDisplay = document.getElementById('scoreDisplay');
-  scoreDisplay.innerText = "Your average click per a second is " + average.toFixed(2);
-  
-  
-  // Add the blinking class to the score display
-  scoreDisplay.classList.add('blink');
-}
- 
