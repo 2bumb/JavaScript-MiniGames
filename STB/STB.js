@@ -70,11 +70,12 @@ function spacebarReleaseHandler(event) {
 }
 
 // Function to start the timer
+// Function to start the timer
 function startTimer(timeLeft) {
   function timerOn() {
     timeLeft--;
     // Update timer display with "Timer: " before the timeLeft value
-    document.getElementById("timer").innerHTML = "Timer: " + String(timeLeft);
+    document.getElementById("timer").innerHTML = "Time: " + String(timeLeft) + "s";
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when timeLeft reaches 0
       calculateAverage(); // Calculate and display average clicks per second
@@ -89,10 +90,13 @@ function startTimer(timeLeft) {
       }
       // Show average display when the game ends
       averageDisplay.style.display = "block";
+      // Add a blinking animation to the average display
+      averageDisplay.classList.add("blink");
     }
   }
   timerInterval = setInterval(timerOn, 1000);
 }
+
 
 // Function to calculate and display average clicks per second
 function calculateAverage() {
