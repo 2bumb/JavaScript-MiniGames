@@ -99,16 +99,16 @@ function refreshClick() {
     document.getElementById("refreshButton").classList.add("spin-animation");
     
     // Reset the randomNumberGenerated flag
-    randomNumberGenerated = true;
+    randomNumberGenerated = true; //the refresh button will now generate a new number
     
     // Clear the previous guesses display
-    document.getElementById("previousguest").innerText = "";
+    document.getElementById("previousguest").innerText = "";// the previous guess will disappear and be blank 
     
     // Clear the answer display
-    document.querySelector('.answer').innerText = "";
+    document.querySelector('.answer').innerText = ""; // the hint or winning display will be blank an disappear
     
     // Clear the guess input field
-    document.getElementById("guessInput").value = "";
+    document.getElementById("guessInput").value = "";// the user input or the searchbar will get rid of the remaining number inside
     
     // Remove the spin-animation class after the animation completes
     setTimeout(function() {
