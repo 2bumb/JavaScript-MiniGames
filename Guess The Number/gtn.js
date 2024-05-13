@@ -1,5 +1,5 @@
 // Flag to check if the random number has been generated
-let randomNumberGenerated = false; //
+let randomNumberGenerated = true; //when submit button is clicked and ther clicent puts 1 number between 1-10, js will generate random number the same time when the user picks a number and submits it
 let answer; // declaring answer as a undefined data type allows the varaible to be the genrated answer's value and provides flexbility 
 
 //This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
@@ -10,10 +10,10 @@ function submitGuess() {
     const minNum = 1;
     const maxNum = 10;
     const warmRange = 1;
-    if (!randomNumberGenerated) {
-        answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+    if (randomNumberGenerated) {
+        answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum; //
         console.log(answer);
-        randomNumberGenerated = true;
+        randomNumberGenerated = false;// this turns off or flag the function meaning the code will be generated only one time(this is a good thing because now the client is able to play the game without false, the game will keep generating a random number)
         document.querySelector('.answer').innerText = "";
     }
 
