@@ -1,6 +1,6 @@
 // Flag to check if the random number has been generated
-let randomNumberGenerated = false;
-let answer;
+let randomNumberGenerated = false; //
+let answer; // declaring answer as a undefined data type allows the varaible to be the genrated answer's value and provides flexbility 
 
 //This code displays the clients number of guess using the button and if the user submits an answer without inputing an answer, there will be a message saying "Please enter a guess"
 
