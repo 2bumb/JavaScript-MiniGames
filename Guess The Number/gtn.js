@@ -14,7 +14,6 @@ function submitGuess() {
         answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum; //
         console.log(answer);
         randomNumberGenerated = false;// this turns off or flag the function meaning the code will be generated only one time(this is a good thing because now the client is able to play the game without false, the game will keep generating a random number)
-        // document.querySelector('.answer').innerText = "" we dont need this code but just incase ill keep it here for noe;
     }
 
     let guessInput = document.getElementById("guessInput");
@@ -100,7 +99,7 @@ function refreshClick() {
     document.getElementById("refreshButton").classList.add("spin-animation");
     
     // Reset the randomNumberGenerated flag
-    randomNumberGenerated = false;
+    randomNumberGenerated = true;
     
     // Clear the previous guesses display
     document.getElementById("previousguest").innerText = "";
