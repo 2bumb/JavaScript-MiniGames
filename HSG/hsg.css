@@ -1,9 +1,24 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; /* horizontally center the container */
+    align-items: center; /* vertically center the container */
+    height: 100vh; /* make sure the body takes up the full viewport height */
+}
 
-    }
-    .container-shadowbox{ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin: 10px 0;}
+.container-shadowbox {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px; /* Add padding to give some space around the content */
+}
+
+.container-shadowbox h1 {
+    text-align: center; /* Center the text horizontally */
+}
+
+canvas {
+    display: block; /* Make sure canvas is a block element */
+    margin: 0 auto; /* Center the canvas horizontally */
+}
+
+#gameBoard{border:6px solid;}
+
