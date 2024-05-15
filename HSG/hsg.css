@@ -9,16 +9,32 @@ body {
 .container-shadowbox {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 20px; /* Add padding to give some space around the content */
+    position: relative;
+    max-width: 500px; /* Add max-width to limit the width of the container */
+    width: 100%;
 }
 
 .container-shadowbox h1 {
     text-align: center; /* Center the text horizontally */
 }
-
+.GameContainer {
+    position: relative;
+}
 canvas {
     display: block; /* Make sure canvas is a block element */
     margin: 0 auto; /* Center the canvas horizontally */
 }
 
 #gameBoard{border:6px solid;}
+
+#score {
+    position: absolute;
+    top: -90px; /* Adjust top position to give some space from the top */
+    right: 25px; /* Adjust right position to give some space from the right */
+}
+#highScore{
+    position: absolute;
+    top: -70px; /* Adjust top position to give some space from the top */
+    right: -10px; /* Adjust right position to give some space from the right */
+}
 
