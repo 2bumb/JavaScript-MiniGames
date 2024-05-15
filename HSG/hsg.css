@@ -1,40 +1,50 @@
 body {
     margin: 0;
     display: flex;
-    justify-content: center; /* horizontally center the container */
-    align-items: center; /* vertically center the container */
-    height: 100vh; /* make sure the body takes up the full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container-shadowbox {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 20px; /* Add padding to give some space around the content */
+    padding: 20px;
     position: relative;
-    max-width: 500px; /* Add max-width to limit the width of the container */
+    max-width: 500px;
     width: 100%;
 }
 
 .container-shadowbox h1 {
-    text-align: center; /* Center the text horizontally */
+    text-align: center;
 }
+
 .GameContainer {
     position: relative;
 }
+
 canvas {
-    display: block; /* Make sure canvas is a block element */
-    margin: 0 auto; /* Center the canvas horizontally */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Make canvas responsive */
+    height: auto; /* Automatically adjust height */
+    border: 6px solid;
 }
 
-#gameBoard{border:6px solid;}
-
-#score {
+.scoreContainer {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    justify-content: flex-start; /* Align children to the top */
+    align-items: flex-end; /* Align children to the right */
     position: absolute;
-    top: -90px; /* Adjust top position to give some space from the top */
-    right: 25px; /* Adjust right position to give some space from the right */
+    top: -90px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
 }
-#highScore{
-    position: absolute;
-    top: -70px; /* Adjust top position to give some space from the top */
-    right: -10px; /* Adjust right position to give some space from the right */
-}
+@media screen and (max-width: 600px) {
+    .scoreContainer {
+        right: -4%; /* Adjust right position for smaller screens */
+    }
 
+    #score, #highScore {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+}
