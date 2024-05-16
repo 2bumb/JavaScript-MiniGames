@@ -73,7 +73,15 @@ canvas {
     margin: 0px 4px; /* Adjust the right margin to create space between buttons */
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
+.spin-animation {
+    animation: spin 1s linear; /* 1-second spin animation */
+    color:rgb(4, 153, 161);
+}
 
 /* This is be use later
 button{background-color: transparent;
