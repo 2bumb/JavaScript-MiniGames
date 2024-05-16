@@ -1,4 +1,6 @@
+//addeventlistner, when client clicks on the home button, there will be audio playing. Once the audio is over/ended the client will be transformed to the index page/homepage 
 // Select the home button element
+//I need to understand why There's too much curly brackets 
 const homeButton = document.getElementById("homeBtn");
 
 // Add event listener for click event
