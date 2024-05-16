@@ -32,7 +32,7 @@ canvas {
     border: 6px solid;
 }
 
-.scoreContainer {
+.btnContainer {
     display: flex;
     flex-direction: column; /* Align children vertically */
     justify-content: flex-start; /* Align children to the top */
@@ -42,15 +42,19 @@ canvas {
     right: 10px; /* Adjust right position */
 }
 @media screen and (max-width: 600px) {
-    .scoreContainer {
+    .btnContainer {
         right: -4%; /* Adjust right position for smaller screens */
     }
 
-    #score, #highScore {
+    #resetBtn, #homeBtn {
         font-size: 0.8em; /* Adjust font size for smaller screens */
     }
 }
 
+#resetBtn, #homeBtn{
+    width:30px;
+}
+ 
 #score, #highScore {
  font-weight: 200;
 }
