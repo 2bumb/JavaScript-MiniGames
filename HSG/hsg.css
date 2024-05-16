@@ -48,3 +48,10 @@ canvas {
         font-size: 0.8em; /* Adjust font size for smaller screens */
     }
 }
+
+#score, #highScore {
+ font-weight: 200;
+}
+#scoretext, #highScoretext {
+    font-weight: 550;
+}
