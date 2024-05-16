@@ -32,6 +32,8 @@ canvas {
     border: 6px solid;
 }
 
+
+/*Button styling*/
 .btnContainer {
     display: flex;
     flex-direction: row; /* Align children vertically */
@@ -80,8 +82,7 @@ border: transparent;} */
 
 
 
-
- 
+/*Score styling */
 #score, #highScore {
  font-weight: 200;
 }
