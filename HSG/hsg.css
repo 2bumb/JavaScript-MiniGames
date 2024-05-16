@@ -20,6 +20,8 @@ body {
 
 .GameContainer {
     position: relative;
+    text-align: center;
+    
 }
 
 canvas {
