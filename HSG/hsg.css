@@ -34,12 +34,12 @@ canvas {
 
 .btnContainer {
     display: flex;
-    flex-direction: column; /* Align children vertically */
+    flex-direction: row; /* Align children vertically */
     justify-content: flex-start; /* Align children to the top */
     align-items: flex-end; /* Align children to the right */
     position: absolute;
     top: -90px; /* Adjust top position */
-    right: 10px; /* Adjust right position */
+    right: -10px; /* Adjust right position */
 }
 @media screen and (max-width: 600px) {
     .btnContainer {
@@ -51,9 +51,36 @@ canvas {
     }
 }
 
-#resetBtn, #homeBtn{
-    width:30px;
+#resetBtn, #homeBtn{ /*Need to find our why the refresh without this guy keeps going to the left*/
+    width:35px;
 }
+ 
+
+#refreshButton {
+    font-size: 22px; /* Change the font size to the desired size */
+    color:rgb(4, 153, 161);
+}
+
+ 
+#homeBtn i {
+    font-size: 22px;
+    color:brown;
+}
+
+.btnContainer button {
+    margin: 0px 4px; /* Adjust the right margin to create space between buttons */
+}
+
+
+
+/* This is be use later
+button{background-color: transparent;
+
+border: transparent;} */
+
+
+
+
  
 #score, #highScore {
  font-weight: 200;
@@ -61,3 +88,4 @@ canvas {
 #scoretext, #highScoretext {
     font-weight: 550;
 }
+
