@@ -83,10 +83,23 @@ canvas {
     color:rgb(4, 153, 161);
 }
 
-/* This is be use later
 button{background-color: transparent;
 
-border: transparent;} */
+border: transparent;}
+
+button:hover{cursor: pointer;}
+ 
+
+
+#resetBtn:hover i {
+    color:rgb(23, 129, 93); /* Change this to the color you want */
+}
+
+/* Hover effect for homeBtn */
+#homeBtn:hover i {
+    color: rgb(108, 7, 7); /* Change this to the color you want */
+}
+
 
 
 
