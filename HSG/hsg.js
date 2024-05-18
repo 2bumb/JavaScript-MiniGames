@@ -95,7 +95,7 @@ function createFood() {
 
         snake.forEach(part => {
             if (part.x === foodX && part.y === foodY) {
-                foodOnSnake = true;
+                foodOnSnake = true; 
             }
         });
     } while (foodOnSnake);
@@ -116,6 +116,7 @@ function moveSnake() {
         score += 1;
         scoreText.textContent = score;
         createFood();
+        eatAudio.play();
     } else {
         snake.pop();
     }
@@ -183,7 +184,30 @@ function displayGameOver() {
 }
 
 function resetGame() {
+    animateReset(); // Trigger the animation
+}
+// This will  refresh the game, before the  game refresh, the animation of the icon will be played with audio, when those two are over the refresh will activate
+function animateReset() {
+    const resetIcon = resetBtn.querySelector("i");
+    resetIcon.classList.add("spin-animation");
+
+    // Play the refresh audio
     refreshAudio.play();
+
+    // Wait for the animation and audio to finish
+    setTimeout(() => {
+        // Remove the animation class
+        resetIcon.classList.remove("spin-animation");
+
+        // Wait for the audio to finish playing
+        setTimeout(() => {
+            // Call the reset function after both animation and audio have finished
+            doResetGame();
+        }, 500); // Adjust the time to match the duration of your audio
+    }, 500); // Adjust the time to match the duration of your animation
+}
+
+function doResetGame() {
     score = 0;
     xVelocity = unitSize;
     yVelocity = 0;
@@ -238,6 +262,7 @@ function drawEyesAndTongue(x, y) {
             case xVelocity === unitSize: // Moving right
                 ctx.lineTo(x + unitSize, y + unitSize * 0.5);
                 break;
+                
         }
         ctx.strokeStyle = "red";
         ctx.lineWidth = 2;
