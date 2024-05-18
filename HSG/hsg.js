@@ -173,9 +173,8 @@ function checkGameOver() {
         }
     }
 }
-
 function displayGameOver() {
-    ctx.font = "50px MV Boli";
+    ctx.font = "30px 'Press Start 2P'";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
