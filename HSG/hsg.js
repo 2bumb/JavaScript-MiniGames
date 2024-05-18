@@ -178,10 +178,12 @@ function displayGameOver() {
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
+    negativeaudio.play();
     running = false;
 }
 
 function resetGame() {
+    refreshAudio.play();
     score = 0;
     xVelocity = unitSize;
     yVelocity = 0;
