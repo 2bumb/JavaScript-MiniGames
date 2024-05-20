@@ -218,18 +218,80 @@ function updateHighScore() {
         highScoreText.textContent = highScore;
     }
 }
-
 function displayGameOver() {
     ctx.font = "30px 'Press Start 2P'";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
-}
 
+    // Show the Play Again button
+    const playAgainBtn = document.getElementById("PlayAgain");
+    playAgainBtn.style.display = "block";
+}
+ 
 function resetGame() {
     animateReset(); // Trigger the animation
-}
+    hidePlayAgainButton(); // Hide the Play Again button
+ 
 
+}
+ // PLay AGAIN BUTTON
+ const playAgainBtn = document.getElementById("PlayAgain");
+
+ playAgainBtn.addEventListener("click", function() {
+     hidePlayAgainButton(); // Hide the Play Again button
+     gameReset(); // Reset the game without resetting the high score
+ });
+ 
+ function hidePlayAgainButton() {
+     playAgainBtn.style.display = "none"; // Hide the Play Again button
+ }
+ 
+ function gameReset() {
+     // Reset the game state or variables here
+     // Then start the game again
+     // This function should contain the logic to reset the game without resetting the high score
+     score = 0; // Reset score
+     running = true; // Set running to true
+     snake = [ // Reset snake position
+         { x: unitSize * 4, y: 0 },
+         { x: unitSize * 3, y: 0 },
+         { x: unitSize * 2, y: 0 },
+         { x: unitSize, y: 0 },
+         { x: 0, y: 0 }
+     ];
+     createFood(); // Create new food
+     scoreText.textContent = score; // Update score display
+     clearBoard(); // Clear the game board
+     drawFood(); // Draw new food
+     drawSnake(); // Draw new snake
+     nextTick(); // Start the game loop
+ }
+ 
+ function checkGameOver() {
+     if (snake[0].x < 0 || snake[0].x >= gameWidth || snake[0].y < 0 || snake[0].y >= gameHeight) {
+         running = false;
+         showPlayAgainButton(); // Show the Play Again button
+     }
+ 
+     for (let i = 1; i < snake.length; i++) {
+         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
+             running = false;
+             showPlayAgainButton(); // Show the Play Again button
+         }
+     }
+ 
+     if (!running) {
+         updateHighScore();
+     }
+ }
+ 
+ function showPlayAgainButton() {
+     playAgainBtn.style.display = "block"; // Show the Play Again button
+ }
+ 
+
+//
 function animateReset() {
     const resetIcon = resetBtn.querySelector("i");
     resetIcon.classList.add("spin-animation");

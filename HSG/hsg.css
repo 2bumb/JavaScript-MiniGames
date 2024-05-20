@@ -122,3 +122,36 @@ button:hover{cursor: pointer;}
     animation: spin 1s linear; /* 1-second spin animation */
     color: rgb(4, 153, 161);
 }
+
+
+/* PlayAgain  */
+#gameOverContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#PlayAgain {
+    display: none;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Margin to separate from GAME OVER text */
+    text-align: center;
+}
+
+#PlayAgain:hover {
+    background-color: gray;
+}
+
