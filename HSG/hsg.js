@@ -325,6 +325,77 @@ function doResetGame() {
     gameStart();
 }
 
+
+
+
+
+const upAudio = document.getElementById("upAudio");
+const downAudio = document.getElementById("downAudio");
+const leftAudio = document.getElementById("leftAudio");
+const rightAudio = document.getElementById("rightAudio");
+
+function playUpAudio() {
+    if (upAudio) {
+        upAudio.play();
+    }
+}
+
+function playDownAudio() {
+    if (downAudio) {
+        downAudio.play();
+    }
+}
+
+function playLeftAudio() {
+    if (leftAudio) {
+        leftAudio.play();
+    }
+}
+
+function playRightAudio() {
+    if (rightAudio) {
+        rightAudio.play();
+    }
+}
+
+// Modify the changeDirection function to play appropriate audio when changing direction
+function changeDirection(event) {
+    const keyPressed = event.keyCode;
+    const LEFT = 37;
+    const UP = 38;
+    const RIGHT = 39;
+    const DOWN = 40;
+
+    const goingUp = yVelocity === -unitSize;
+    const goingDown = yVelocity === unitSize;
+    const goingRight = xVelocity === unitSize;
+    const goingLeft = xVelocity === -unitSize;
+
+    switch (true) {
+        case (keyPressed === LEFT && !goingRight):
+            xVelocity = -unitSize;
+            yVelocity = 0;
+            playLeftAudio();
+            break;
+        case (keyPressed === UP && !goingDown):
+            xVelocity = 0;
+            yVelocity = -unitSize;
+            playUpAudio();
+            break;
+        case (keyPressed === RIGHT && !goingLeft):
+            xVelocity = unitSize;
+            yVelocity = 0;
+            playRightAudio();
+            break;
+        case (keyPressed === DOWN && !goingUp):
+            xVelocity = 0;
+            yVelocity = unitSize;
+            playDownAudio();
+            break;
+    }
+}
+
+
 const homeButton = document.getElementById("homeBtn");
 
 homeButton.addEventListener("click", function () {
