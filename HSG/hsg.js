@@ -241,6 +241,7 @@ function resetGame() {
  playAgainBtn.addEventListener("click", function() {
      hidePlayAgainButton(); // Hide the Play Again button
      gameReset(); // Reset the game without resetting the high score
+     refreshAudio.play();
  });
  
  function hidePlayAgainButton() {
