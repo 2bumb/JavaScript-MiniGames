@@ -12,6 +12,7 @@ body {
     position: relative;
     max-width: 500px;
     width: 100%;
+    background-color: rgb(79, 154, 79);
 }
 
 .container-shadowbox h1 {
@@ -29,7 +30,7 @@ canvas {
     margin: 0 auto;
     max-width: 100%; /* Make canvas responsive */
     height: auto; /* Automatically adjust height */
-    border: 6px solid;
+    border:none;
 }
 
 
@@ -108,7 +109,8 @@ button:hover{cursor: pointer;}
  font-weight: 200;
 }
 #scoretext, #highScoretext {
-    font-weight: 550; font-family:Poetsen One; 
+    font-family: 'Press Start 2P', cursive;
+  color:white
 }
 
 
@@ -156,7 +158,9 @@ button:hover{cursor: pointer;}
     background-color: gray;
 }
 #hungrySnakeTitle{ 
-  font-family:Poetsen One;  
+    font-family: 'Press Start 2P', cursive;
+
+    color:rgb(255, 248, 248);
 }
 
 
