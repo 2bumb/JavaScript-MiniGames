@@ -108,7 +108,7 @@ button:hover{cursor: pointer;}
  font-weight: 200;
 }
 #scoretext, #highScoretext {
-    font-weight: 550;
+    font-weight: 550; font-family:Poetsen One; 
 }
 
 
@@ -135,6 +135,7 @@ button:hover{cursor: pointer;}
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 
 #PlayAgain {
@@ -154,4 +155,8 @@ button:hover{cursor: pointer;}
 #PlayAgain:hover {
     background-color: gray;
 }
+#hungrySnakeTitle{ 
+  font-family:Poetsen One;  
+}
+
 
